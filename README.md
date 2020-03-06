@@ -15,8 +15,10 @@ Unzip the Tomcat-install.zip file wnywhere on your system. Then change the follo
 Change the `@echo off` instruction at the beginning of the file by `@echo on`
 
 Add the following lines before the `setlocal` instruction:
-`set CATALINA_HOME=<your Tomcat directory> (for example: L:\WRK\Java\Onto\Tomcat)
-set JAVA_HOME=<your JRE install directory> (for example: C:\Program Files\Java\jre1.8.0_111)`
+```
+set CATALINA_HOME=<your Tomcat directory> (for example: L:\WRK\Java\Onto\Tomcat)
+set JAVA_HOME=<your JRE install directory> (for example: C:\Program Files\Java\jre1.8.0_111)
+```
   
 Add a `pause` instruction at the end of the file
 
