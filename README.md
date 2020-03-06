@@ -22,3 +22,22 @@ set JAVA_HOME=<your JRE install directory> (for example: C:\Program Files\Java\j
   
 Add a `pause` instruction at the end of the file
 
+## edit tomcat-users.xml
+Add the following users declaration inside the `tomcat-users` node:
+```
+   <role rolename="admin-gui"/>
+   <role rolename="manager-gui"/>
+   <user username="admin" password="blabla" roles="admin-gui,manager-gui"/>
+```   
+
+You will have the following file:
+```
+<tomcat-users xmlns="http://tomcat.apache.org/xml"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
+              version="1.0">
+   <role rolename="admin-gui"/>
+   <role rolename="manager-gui"/>
+   <user username="admin" password="password" roles="admin-gui,manager-gui"/>
+</tomcat-users>
+```   
